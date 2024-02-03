@@ -1,0 +1,19 @@
+version: '3'
+services:
+  mageai:
+    image: mageai/mageai:0.9.60
+    ports:
+      - "6789:6789"
+    volumes:
+      - .:/home/src
+    command: [ "/app/run_app.sh", "mage", "start", "mage-ai" ]
+  pgdatabase:
+    image: postgres:13
+    ports:
+      - 5432:5432
+    volumes:
+      - ./ny_taxi_postgres_data:/var/lib/postgresql/data:rw
+    environment:
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_USER=root
+      - POSTGRES_DB=ny_taxi

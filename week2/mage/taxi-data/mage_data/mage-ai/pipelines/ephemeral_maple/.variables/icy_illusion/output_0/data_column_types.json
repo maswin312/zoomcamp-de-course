@@ -1,0 +1,1 @@
+{"Ship Mode": "str", "Segment": "str", "Country": "str", "City": "str", "State": "str", "Postal Code": "int64", "Region": "str", "Category": "str", "Sub-Category": "str", "Sales": "float64", "Quantity": "int64", "Discount": "float64", "Profit": "float64"}
